@@ -116,6 +116,8 @@ h3 {
 .navigation-links .link:hover,
 .navigation-links .link:focus {
   color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-links-top {
@@ -148,6 +150,8 @@ h3 {
 .link-contact:focus {
   color: var(--accent-color);
   --color4: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icons-contact {
@@ -331,6 +335,8 @@ h3 {
 .team-icon-border:focus {
   --color3: var(--white-text);
   background-color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Our clients */
@@ -363,6 +369,8 @@ h3 {
   border: 1px solid var(--accent-color);
   --color3: var(--accent-color);
   --color2: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Footer */
@@ -399,6 +407,8 @@ h3 {
 .contact-links-bottom .link:hover,
 .contact-links-bottom .link:focus {
   color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-media-box {
@@ -447,6 +457,8 @@ h3 {
 .social-media-icon-border:hover,
 .social-media-icon-border:focus {
   background-color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Portfolio */
@@ -472,6 +484,8 @@ h3 {
   cursor: pointer;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-name {
@@ -530,10 +544,51 @@ h3 {
   cursor: pointer;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-border {
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
+}
+
+/* modal.js */
+
+.modal {
+  top: 221px;
+  left: 536px;
+  width: 528px;
+  height: 581px;
+  background-color: var(--white-text);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: fixed;
+  z-index: 1;
+  transition-property: visibility, opacity, transform;
+  transition-duration: 2;
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+
+.is-hidden {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.button-close {
+  width: 30px;
+  height: 30px;
+  background-color: var(--white-text);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-left: 490px;
+  display: flex;
+  align-items: center;
 }

@@ -75,7 +75,9 @@
           </h1>
 
           <div class="box3">
-            <button type="button" class="service-order">Zamów usługę</button>
+            <button type="button" class="service-order" data-modal-open>
+              Zamów usługę
+            </button>
           </div>
         </section>
       </div>
@@ -458,5 +460,13 @@
         </div>
       </div>
     </footer>
+    <div class="modal is-hidden" data-modal>
+      <button class="button-close" data-modal-close>
+        <svg width="18px" height="18px">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

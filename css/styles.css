@@ -54,6 +54,15 @@ h3 {
   text-decoration: none;
 }
 
+.link-hover {
+  text-decoration: none;
+}
+
+.lidnk::after {
+  content: attr(href);
+  color: var(--accent-color);
+}
+
 .second-headline {
   color: var(--main-text-color);
   font-size: 36px;
@@ -105,7 +114,7 @@ h3 {
   margin-right: 46px;
 }
 
-.navigation-links .link {
+.link {
   color: var(--main-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -245,7 +254,7 @@ h3 {
 
 /* What we do */
 
-.what-we-do-box {
+.list-what-we-do {
   display: flex;
   justify-content: center;
 }
@@ -260,6 +269,37 @@ h3 {
 
 .section-what-we-do {
   margin-bottom: 94px;
+}
+
+.item-description-background {
+  position: relative;
+  overflow: hidden;
+}
+
+.item-description-background > .item-description {
+  width: 370px;
+  height: 70px;
+
+  position: absolute;
+  left: 50%;
+  top: 87%;
+  margin: 0;
+  padding: 27px 90px;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 0.87;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(47, 48, 58, 0.8) 50%,
+    rgba(47, 48, 58, 0.8) 50%
+  );
+  color: var(--white-text);
 }
 
 /* Our team */
@@ -369,7 +409,7 @@ h3 {
   border: 1px solid var(--accent-color);
   --color3: var(--accent-color);
   --color2: var(--accent-color);
-  transition-duration: 250ms;
+  transition-duration: 1s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -556,9 +596,27 @@ h3 {
 
 /* modal.js */
 
+.modal-background {
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0);
+  position: fixed;
+  z-index: 1;
+  transition-property: visibility;
+  visibility: visible;
+  display: flex;
+  animation-name: modalOpening;
+  animation-duration: 3000ms;
+  animation-direction: normal;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in;
+}
+
 .modal {
-  top: 221px;
-  left: 536px;
+  top: 50%;
+  left: 50%;
   width: 528px;
   height: 581px;
   background-color: var(--white-text);
@@ -566,10 +624,10 @@ h3 {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   position: fixed;
-  z-index: 1;
-  transition-property: visibility, opacity, transform;
+  z-index: 2;
+  transition-property: visibility, transform;
   transition-duration: 2;
-  opacity: 1;
+  transform: translateX(-50%) translateY(-50%);
   visibility: visible;
   display: block;
 }
@@ -591,4 +649,21 @@ h3 {
   margin-left: 490px;
   display: flex;
   align-items: center;
+}
+
+/* Animations */
+
+@keyframes modalOpening {
+  0% {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  30% {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  60% {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
 }

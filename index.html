@@ -146,30 +146,39 @@
         <section class="section-what-we-do">
           <h2 class="second-headline">Czym się zajmujemy</h2>
 
-          <ul class="what-we-do-box">
+          <ul class="list-what-we-do">
             <li class="item-what-we-do">
-              <img
-                src="images/what-do-we-do/whatdowedo-1.jpg"
-                alt="osoba pisząca na komputerze"
-                width="370"
-                height="294"
-              />
+              <div class="item-description-background">
+                <img
+                  src="images/what-do-we-do/whatdowedo-1.jpg"
+                  alt="osoba pisząca na komputerze"
+                  width="370"
+                  height="294"
+                />
+                <p class="item-description">Aplikacje komputerowe</p>
+              </div>
             </li>
             <li class="item-what-we-do">
-              <img
-                src="images/what-do-we-do/whatdowedo-2.jpg"
-                alt="osoba sprawdzająca powiadomienia na telefonie"
-                width="370"
-                height="294"
-              />
+              <div class="item-description-background">
+                <img
+                  src="images/what-do-we-do/whatdowedo-2.jpg"
+                  alt="osoba sprawdzająca powiadomienia na telefonie"
+                  width="370"
+                  height="294"
+                />
+                <p class="item-description">Aplikacje mobilne</p>
+              </div>
             </li>
             <li class="item-what-we-do">
-              <img
-                src="images/what-do-we-do/whatdowedo-3.jpg"
-                alt="tablet z paletą kolorów"
-                width="370"
-                height="294"
-              />
+              <div class="item-description-background">
+                <img
+                  src="images/what-do-we-do/whatdowedo-3.jpg"
+                  alt="tablet z paletą kolorów"
+                  width="370"
+                  height="294"
+                />
+                <p class="item-description">Rozwiązania graficzne</p>
+              </div>
             </li>
           </ul>
         </section>
@@ -460,12 +469,14 @@
         </div>
       </div>
     </footer>
-    <div class="modal is-hidden" data-modal>
-      <button class="button-close" data-modal-close>
-        <svg width="18px" height="18px">
-          <use href="./images/icons.svg#icon-close"></use>
-        </svg>
-      </button>
+    <div class="modal-background is-hidden" data-modal>
+      <div class="modal">
+        <button class="button-close" data-modal-close>
+          <svg width="18px" height="18px">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
     </div>
     <script src="./js/modal.js"></script>
   </body>

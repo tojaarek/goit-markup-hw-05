@@ -74,6 +74,10 @@ h3 {
 
 /* Header */
 
+.header-line {
+  border: 1px solid #ececec;
+}
+
 .box1 {
   display: flex;
   align-items: center;
@@ -501,7 +505,7 @@ h3 {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Portfolio */
+/* Project filters */
 
 .project-filter {
   color: var(--main-text-color);
@@ -528,6 +532,16 @@ h3 {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.item-project-filter {
+  margin-right: 8px;
+}
+
+.item-project-filter:last-child {
+  margin-right: 0px;
+}
+
+/* Project results */
+
 .project-name {
   color: var(--main-text-color);
   font-size: 18px;
@@ -547,21 +561,52 @@ h3 {
   padding-bottom: 20px;
 }
 
-.header-line {
-  border: 1px solid #ececec;
+.overlay-box {
+  position: relative;
+  width: 370px;
+  height: 294px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(/images/portfolio/technocrack.jpg);
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translatex(-100%);
+  transition: transform 250ms ease;
+}
+
+.overlay > .overlay-description {
+  padding-top: 49px;
+  padding-left: 24px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 0.64;
+  letter-spacing: 0.03em;
+  color: var(--white-text);
+}
+
+.overlay code {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 2px;
+  background-color: rgba(33, 150, 243, 0.9);
+}
+
+.item-project:hover {
+  transform: translatex(0);
 }
 
 .list-project-filter {
   display: flex;
   justify-content: center;
-}
-
-.item-project-filter {
-  margin-right: 8px;
-}
-
-.item-project-filter:last-child {
-  margin-right: 0px;
 }
 
 .section-projects {
@@ -601,21 +646,20 @@ h3 {
   left: 0px;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
   z-index: 1;
   transition-property: visibility;
   visibility: visible;
   display: flex;
-  animation-name: modalOpening;
+  animation-name: modalOpen;
   animation-duration: 3000ms;
-  animation-direction: normal;
-  animation-fill-mode: both;
   animation-timing-function: ease-in;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
 }
 
 .modal {
-  top: 50%;
   left: 50%;
   width: 528px;
   height: 581px;
@@ -629,7 +673,11 @@ h3 {
   transition-duration: 2;
   transform: translateX(-50%) translateY(-50%);
   visibility: visible;
-  display: block;
+  animation-name: modalFrame;
+  animation-duration: 1300ms;
+  animation-timing-function: ease-in;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
 }
 
 .is-hidden {
@@ -653,17 +701,50 @@ h3 {
 
 /* Animations */
 
-@keyframes modalOpening {
+@keyframes modalOpen {
   0% {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0);
   }
-  30% {
+  50% {
     background-color: rgba(0, 0, 0, 0.2);
-  }
-  60% {
-    background-color: rgba(0, 0, 0, 0.3);
   }
   100% {
     background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+@keyframes modalFrame {
+  0% {
+    top: 0%;
+  }
+  10% {
+    top: 5%;
+  }
+  20% {
+    top: 10%;
+  }
+  30% {
+    top: 15%;
+  }
+  40% {
+    top: 20%;
+  }
+  50% {
+    top: 25%;
+  }
+  60% {
+    top: 30%;
+  }
+  70% {
+    top: 35%;
+  }
+  80% {
+    top: 40%;
+  }
+  90% {
+    top: 45%;
+  }
+  100% {
+    top: 50%;
   }
 }

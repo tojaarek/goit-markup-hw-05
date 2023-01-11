@@ -50,19 +50,6 @@ h3 {
   padding-bottom: 94px;
 }
 
-.link {
-  text-decoration: none;
-}
-
-.link-hover {
-  text-decoration: none;
-}
-
-.lidnk::after {
-  content: attr(href);
-  color: var(--accent-color);
-}
-
 .second-headline {
   color: var(--main-text-color);
   font-size: 36px;
@@ -73,6 +60,52 @@ h3 {
 }
 
 /* Header */
+
+.link-active {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.link-active::after {
+  content: "";
+  width: 53px;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  position: absolute;
+  top: 47px;
+  left: 0px;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.link-active-portfolio {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.link-active-portfolio::after {
+  content: "";
+  width: 58px;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  position: absolute;
+  top: 47px;
+  left: 0px;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
 
 .header-line {
   border: 1px solid #ececec;
@@ -116,9 +149,11 @@ h3 {
 
 .list-navigation {
   margin-right: 46px;
+  position: relative;
 }
 
 .link {
+  text-decoration: none;
   color: var(--main-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -126,8 +161,15 @@ h3 {
   letter-spacing: 0.02em;
 }
 
-.navigation-links .link:hover,
-.navigation-links .link:focus {
+.link:hover,
+.link:focus {
+  color: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-active:hover,
+.link-active:focus {
   color: var(--accent-color);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

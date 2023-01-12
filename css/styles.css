@@ -438,6 +438,9 @@ h3 {
 
 .list-icons {
   text-decoration: none;
+  transition-property: --color3, --color2;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item-border {
@@ -448,6 +451,9 @@ h3 {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition-property: border, --color3, --color2;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item-border:hover,
@@ -455,8 +461,6 @@ h3 {
   border: 1px solid var(--accent-color);
   --color3: var(--accent-color);
   --color2: var(--accent-color);
-  transition-duration: 1s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Footer */
@@ -612,14 +616,12 @@ h3 {
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  width: 370px;
+  height: 294px;
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);
-  transition: transform 500ms ease-in;
+  transition: transform 500ms ease;
 }
 
 .overlay > .overlay-description {
@@ -655,10 +657,16 @@ h3 {
   flex-direction: column;
 }
 
-.item-project:hover .overlay {
+.item-project:hover {
   cursor: pointer;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translatex(0);
+}
+
+.item-project:hover .overlay {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transform: translatex(0);

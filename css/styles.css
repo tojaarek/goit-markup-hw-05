@@ -438,7 +438,8 @@ h3 {
 
 .list-icons {
   text-decoration: none;
-  fill: var(--main-description-color);
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item-border {

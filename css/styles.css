@@ -438,9 +438,7 @@ h3 {
 
 .list-icons {
   text-decoration: none;
-  transition-property: --color3, --color2;
-  transition-duration: 1s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--main-description-color);
 }
 
 .item-border {
@@ -459,8 +457,7 @@ h3 {
 .item-border:hover,
 .item-border:focus {
   border: 1px solid var(--accent-color);
-  --color3: var(--accent-color);
-  --color2: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 /* Footer */

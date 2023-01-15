@@ -59,6 +59,10 @@ h3 {
   margin-bottom: 50px;
 }
 
+.align {
+  text-align: center;
+}
+
 /* Header */
 
 .link-active {
@@ -68,6 +72,9 @@ h3 {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
 
 .link-active::after {
@@ -77,7 +84,7 @@ h3 {
   background-color: var(--accent-color);
   border-radius: 2px;
   position: absolute;
-  top: 47px;
+  top: 46px;
   left: 0px;
   margin: 0;
   padding: 0;
@@ -91,6 +98,9 @@ h3 {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
 
 .link-active-portfolio::after {
@@ -100,7 +110,7 @@ h3 {
   background-color: var(--accent-color);
   border-radius: 2px;
   position: absolute;
-  top: 47px;
+  top: 46px;
   left: 0px;
   margin: 0;
   padding: 0;
@@ -108,7 +118,7 @@ h3 {
 }
 
 .header-line {
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 
 .box1 {
@@ -159,20 +169,19 @@ h3 {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
 
 .link:hover,
 .link:focus {
   color: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-active:hover,
 .link-active:focus {
   color: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-links-top {
@@ -195,18 +204,20 @@ h3 {
 
 .contact-links-top .link-contact {
   color: var(--main-description-color);
+  fill: var(--main-description-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, fill;
 }
 
 .link-contact:hover,
 .link-contact:focus {
   color: var(--accent-color);
-  --color4: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  fill: var(--accent-color);
 }
 
 .icons-contact {
@@ -224,6 +235,7 @@ h3 {
   letter-spacing: 0.06em;
   padding-top: 200px;
   margin-bottom: 30px;
+  text-transform: uppercase;
 }
 
 .service-order {
@@ -238,6 +250,7 @@ h3 {
   border-radius: 4px;
   cursor: pointer;
   padding: 10px 41px 10px 41px;
+  margin-bottom: 200px;
 }
 
 .section-background-1 {
@@ -247,8 +260,10 @@ h3 {
       rgba(47, 48, 58, 0.4) 50%,
       rgba(47, 48, 58, 0.4) 50%
     ),
-    url(../images/background-images/baner-background.jpg);
-  max-width: 1600px;
+    url(../images/baner-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1600px;
   width: 100%;
   margin: 0px;
 }
@@ -270,6 +285,7 @@ h3 {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .assets-description {
@@ -393,43 +409,47 @@ h3 {
   justify-content: center;
 }
 
-.team-icon {
-  margin-right: 10px;
-  padding-bottom: 30px;
-  display: flex;
-  align-items: center;
-}
-
 .team-icon:last-child {
   margin-right: 0px;
 }
 
-.team-icon-last {
-  margin-right: 0px;
+.team-icon {
+  margin-right: 10px;
 }
 
 .team-icon-border {
   text-decoration: none;
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50px;
+  fill: var(--main-description-color);
+  background-color: var(--white-text);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, fill;
 }
 
 .team-icon-border:hover,
 .team-icon-border:focus {
-  --color3: var(--white-text);
+  fill: var(--white-text);
   background-color: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Our clients */
 
 .list-clients {
+  fill: var(--main-description-color);
+  margin-right: 10px;
+  padding-bottom: 30px;
   display: flex;
+  align-items: center;
   justify-content: center;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: fill;
 }
 
 .item-client {
@@ -438,7 +458,7 @@ h3 {
 
 .list-icons {
   text-decoration: none;
-  transition-duration: 1s;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -446,13 +466,16 @@ h3 {
   text-decoration: none;
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  fill: var(--main-description-color);
   transition-property: border, --color3, --color2;
   transition-duration: 1s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: border;
 }
 
 .item-border:hover,
@@ -490,13 +513,14 @@ h3 {
   line-height: 1.14;
   letter-spacing: 0.02em;
   font-style: normal;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
 
 .contact-links-bottom .link:hover,
 .contact-links-bottom .link:focus {
   color: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-media-box {
@@ -525,7 +549,6 @@ h3 {
 
 .social-media-icon {
   margin-right: 20px;
-  --color3: var(--white-text);
 }
 
 .footer-box {
@@ -536,17 +559,20 @@ h3 {
   text-decoration: none;
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   background-color: var(--footer-socialmedia-icon);
+  fill: var(--white-text);
   border-radius: 50px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, fill;
 }
 
 .social-media-icon-border:hover,
 .social-media-icon-border:focus {
   background-color: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Project filters */
@@ -560,9 +586,13 @@ h3 {
   text-align: center;
   letter-spacing: 0.03em;
   background-color: var(--portfolio-filter);
+  box-shadow: none;
   border: 0px solid;
   border-radius: 4px;
   padding: 6px 22px 6px 22px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, color, box-shadow;
 }
 
 .project-filter:hover,
@@ -572,8 +602,6 @@ h3 {
   cursor: pointer;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item-project-filter {
@@ -659,9 +687,6 @@ h3 {
   cursor: pointer;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translatex(0);
 }
 
 .item-project:hover .overlay {

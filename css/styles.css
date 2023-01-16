@@ -15,6 +15,13 @@
 body {
   color: var(--main-text-color);
   font-family: "Roboto", "Tahoma", sans-serif;
+  letter-spacing: 0.03em;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
 }
 
 ul {
@@ -24,6 +31,7 @@ ul {
 }
 
 p {
+  padding: 0px;
   margin: 0px;
 }
 
@@ -46,8 +54,7 @@ h3 {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 94px 0px;
 }
 
 .second-headline {
@@ -65,8 +72,8 @@ h3 {
 
 /* Header */
 
-.link-active {
-  text-decoration: none;
+.link-active,
+.link-active-portfolio {
   color: var(--accent-color);
   font-weight: 500;
   font-size: 14px;
@@ -75,46 +82,27 @@ h3 {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: color;
+}
+
+.link-active::after,
+.link-active-portfolio::after {
+  content: "";
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  position: absolute;
+  top: 46px;
+  left: 0px;
+  margin: 0;
+  padding: 0;
+  display: block;
 }
 
 .link-active::after {
-  content: "";
   width: 53px;
-  height: 4px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
-  position: absolute;
-  top: 46px;
-  left: 0px;
-  margin: 0;
-  padding: 0;
-  display: block;
 }
-
-.link-active-portfolio {
-  text-decoration: none;
-  color: var(--accent-color);
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: color;
-}
-
 .link-active-portfolio::after {
-  content: "";
   width: 58px;
-  height: 4px;
-  background-color: var(--accent-color);
-  border-radius: 2px;
-  position: absolute;
-  top: 46px;
-  left: 0px;
-  margin: 0;
-  padding: 0;
-  display: block;
 }
 
 .header-line {
@@ -133,7 +121,6 @@ h3 {
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
-  text-decoration: none;
   margin-right: 93px;
 }
 
@@ -142,7 +129,6 @@ h3 {
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
-  text-decoration: none;
 }
 
 .logo-web {
@@ -163,7 +149,6 @@ h3 {
 }
 
 .link {
-  text-decoration: none;
   color: var(--main-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -189,17 +174,12 @@ h3 {
 }
 
 .link-contact {
-  text-decoration: none;
   display: flex;
   align-items: center;
 }
 
-.list-contact {
+.list-contact:not(:last-child) {
   margin-right: 30px;
-}
-
-.list-contact:last-child {
-  margin-right: 0px;
 }
 
 .contact-links-top .link-contact {
@@ -246,7 +226,7 @@ h3 {
   line-height: 1.87;
   letter-spacing: 0.06em;
   background: var(--accent-color);
-  border: 0px solid;
+  border: none;
   border-radius: 4px;
   cursor: pointer;
   padding: 10px 41px 10px 41px;
@@ -265,7 +245,6 @@ h3 {
   background-position: center;
   background-size: 1600px;
   width: 100%;
-  margin: 0px;
 }
 
 .main-headline-box {
@@ -300,8 +279,8 @@ h3 {
   display: flex;
 }
 
-.item-assest {
-  padding-right: 30px;
+.item-assest:not(:last-child) {
+  margin-right: 30px;
 }
 
 .assets-icon-box {
@@ -321,12 +300,8 @@ h3 {
   justify-content: center;
 }
 
-.item-what-we-do {
+.item-what-we-do:not(:last-child) {
   margin-right: 30px;
-}
-
-.what-we-do-box:last-child {
-  margin-right: 0px;
 }
 
 .section-what-we-do {
@@ -335,10 +310,9 @@ h3 {
 
 .item-description-background {
   position: relative;
-  overflow: hidden;
 }
 
-.item-description-background > .item-description {
+.item-description {
   width: 370px;
   height: 70px;
 
@@ -368,14 +342,8 @@ h3 {
 
 .section-background-2 {
   background-color: var(--portfolio-filter);
-}
-
-.list-team {
-  display: flex;
-}
-
-.list-team:last-child {
-  margin-right: 0px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .item-team {
@@ -385,6 +353,10 @@ h3 {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   max-width: 270px;
+}
+
+.item-team:last-child {
+  margin-right: 0px;
 }
 
 .member-name {
@@ -409,16 +381,11 @@ h3 {
   justify-content: center;
 }
 
-.team-icon:last-child {
-  margin-right: 0px;
-}
-
-.team-icon {
+.team-icon:not(:last-child) {
   margin-right: 10px;
 }
 
 .team-icon-border {
-  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -442,7 +409,6 @@ h3 {
 
 .list-clients {
   fill: var(--main-description-color);
-  margin-right: 10px;
   padding-bottom: 30px;
   display: flex;
   align-items: center;
@@ -452,18 +418,16 @@ h3 {
   transition-property: fill;
 }
 
-.item-client {
+.item-client:not(:last-child) {
   margin-right: 30px;
 }
 
 .list-icons {
-  text-decoration: none;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item-border {
-  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -542,11 +506,6 @@ h3 {
   padding-bottom: 20px;
 }
 
-.list-social-media {
-  display: flex;
-  justify-content: center;
-}
-
 .social-media-icon {
   margin-right: 20px;
 }
@@ -556,7 +515,6 @@ h3 {
 }
 
 .social-media-icon-border {
-  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -604,12 +562,8 @@ h3 {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.item-project-filter {
+.item-project-filter:not(:last-child) {
   margin-right: 8px;
-}
-
-.item-project-filter:last-child {
-  margin-right: 0px;
 }
 
 /* Project results */
@@ -633,21 +587,13 @@ h3 {
   padding-bottom: 20px;
 }
 
-.overlay-box {
-  position: relative;
-  width: 370px;
-  height: 294px;
-  overflow: hidden;
-}
-
 .overlay {
   position: absolute;
-  width: 370px;
-  height: 294px;
+  width: 100%;
+  height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
-
-  transform: translateY(100%);
-  transition: transform 500ms ease;
+  top: 101%;
+  transition: top 1s;
 }
 
 .overlay > .overlay-description {
@@ -665,6 +611,8 @@ h3 {
   background-color: rgba(33, 150, 243, 0.9);
 }
 
+.list-team,
+.list-social-media,
 .list-project-filter {
   display: flex;
   justify-content: center;
@@ -684,6 +632,12 @@ h3 {
 .item-project {
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: none;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: box-shadow;
 }
 
 .item-project:hover {
@@ -693,15 +647,14 @@ h3 {
 }
 
 .item-project:hover .overlay {
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translatex(0);
+  top: 0;
 }
 
 .project-border {
-  border-bottom: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
+  border: 1px solid #eee;
+  border-top: none;
+  position: relative;
+  background-color: var(--white-text);
 }
 
 /* modal.js */

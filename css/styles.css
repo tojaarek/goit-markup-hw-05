@@ -655,6 +655,9 @@ h3 {
   line-height: 1.55;
   letter-spacing: 0.03em;
   color: var(--white-text);
+  padding-top: 49px;
+  padding-left: 24px;
+  padding-right: 45px;
 }
 
 .overlay code {

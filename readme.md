@@ -78,11 +78,13 @@ Then, before the closing body tag, add the script tag with a link to the script 
 
   <!-- Place before the body closing tag -->
   <script src="./js/modal.js"></script>
-</body>```
+</body>
+```
 
 The script to be copied and pasted into the modal.js file.
 
-```(() => {
+```
+(() => {
   const refs = {
     openModalBtn: document.querySelector("[data-modal-open]"),
     closeModalBtn: document.querySelector("[data-modal-close]"),
@@ -95,4 +97,5 @@ The script to be copied and pasted into the modal.js file.
   function toggleModal() {
     refs.modal.classList.toggle("is-hidden");
   }
-})();```
+})();
+```

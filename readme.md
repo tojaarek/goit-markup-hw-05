@@ -9,7 +9,7 @@ Live preview: https://tojaarek.github.io/goit-markup-hw-05/
 
 # Criteria for work acceptance by the tutor
 
-Project
+<b>Project</b>
 
 «A1» All styles are contained in one styles.css file in the css folder.
 

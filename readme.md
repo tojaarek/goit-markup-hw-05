@@ -73,7 +73,8 @@ A modal window with the order form opens by clicking on the "Order a service" bu
 
 Then, before the closing body tag, add the script tag with a link to the script file for the modal window.
 
-```<body>
+```
+<body>
   <!-- All you markup, including the modal window -->
 
   <!-- Place before the body closing tag -->
